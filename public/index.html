@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="font-epilogue" id="stop-scrolling">
+  <nav id="nav-bar" class="fixed flex-col justify-items-end bg-white h-full w-2/3 right-0 p-5 hidden">
+    <div id="menu-close-position" class="w-full h-fit flex justify-end">
+      <img src="../images/icon-close-menu.svg" alt="close menu icon" id="close-menu-icon" class="w-7 h-7 mb-10">
+    </div>
+    <ul>
+      <ul>
+        <div class="flex gap-4 mb-5">
+          <h2 class="text-mediumGray font-medium">Features</h2>
+          <div class="aspect-arrowRatio flex items-center">
+            <img src="../images/icon-arrow-down.svg" alt="arrow down" id="arrow-down-features">
+          </div>
+        </div>
+
+        <li class="hidden">
+          <div class="flex">
+            <img src="../images/icon-todo.svg" alt="todo icon" class="w-5 h-5">
+            <p>Todo List</p>
+          </div>
+        </li>
+        <li class="hidden">
+          <div class="flex">
+            <img src="../images/icon-reminders.svg" alt="reminders icon" class="w-5 h-5">
+            <p>Reminders</p>
+          </div>
+        </li>
+        <li class="hidden">
+          <div class="flex">
+            <img src="../images/icon-calendar.svg" alt="calendar icon" class="w-5 h-5">
+            <p>Callendar</p>
+          </div>
+        </li>
+        <li class="hidden">
+          <div class="flex">
+            <img src="../images/icon-planning.svg" alt="planning icon" class="w-5 h-5">
+            <p>Planning</p>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <div class="flex gap-4 mb-5">
+          <h2 class="text-mediumGray font-medium">Company</h2>
+          <div class="aspect-arrowRatio flex items-center">
+            <img src="../images/icon-arrow-down.svg" alt="arrow down" id="arrow-down-features">
+          </div>
+        </div>
+        <li class="hidden" class="text-mediumGray font-medium">History</li>
+        <li class="hidden" class="text-mediumGray font-medium">Our Team</li>
+        <li class="hidden" class="text-mediumGray font-medium">Blog</li>
+      </ul>
+      <li><h2 class="text-mediumGray font-medium mb-5">Careers</h2></li>
+      <li><h2 class="text-mediumGray font-medium mb-5">About</h2></li>
+    </ul>
+      <a class="text-mediumGray font-medium text-center mb-5">Login</a>
+      <a class="text-mediumGray font-medium text-center">Register</a>
+  </nav>
+  <div id="wrapper">
+    <header class="flex justify-between p-5">
+      <img src="../images/logo.svg" alt="logo">
+      <img src="../images/icon-menu.svg" alt="menu icon" id="menu-icon" class="w-11">
+    </header>
+    <img src="../images/image-hero-mobile.png" alt="" class="w-full">
+    <main class="flex flex-col items-center text-center px-4 gap-6 my-14">
+      <h1 class="font-bold text-headingSize leading-none">Make remote work</h1>
+      <p class="text-mediumGray">Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+
+      <a href="#" class=" bg-almostBlack w-fit text-almostWhite px-7 py-4 rounded-2xl font-medium leading-none">Learn more</a>
+    </main>
+    <footer class="flex justify-between content-center items-center px-1">
+      <img src="../images/client-databiz.svg" alt="client-databiz" class="w-1/4 p-3 box-border">
+      <img src="../images/client-audiophile.svg" alt="client-audiophile" class="w-1/4 p-3 box-border">
+      <img src="../images/client-meet.svg" alt="client-meet" class="w-1/4 p-3 box-border">
+      <img src="../images/client-maker.svg" alt="client-maker" class="w-1/4 p-3 box-border">
+    </footer>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+<script src="index.js"></script>
+</body>
+</html>
