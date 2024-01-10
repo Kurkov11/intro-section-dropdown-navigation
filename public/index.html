@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="output.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,7 +14,7 @@
   </style>
 </head>
 <body class="font-epilogue" id="stop-scrolling">
-  <nav id="nav-bar" class="fixed flex-col justify-items-end bg-white h-full w-2/3 right-0 p-5 hidden">
+  <nav id="nav-bar" class="z-50 fixed flex-col justify-items-end bg-white h-full w-2/3 right-0 p-5 hidden">
     <div id="menu-close-position" class="w-full h-fit flex justify-end">
       <img src="../images/icon-close-menu.svg" alt="close menu icon" id="close-menu-icon" class="w-7 h-7 mb-10">
     </div>
@@ -69,7 +69,7 @@
       <a class="text-mediumGray font-medium text-center mb-5">Login</a>
       <a class="text-mediumGray font-medium text-center">Register</a>
   </nav>
-  <div id="wrapper">
+  <div id="wrapper" class="">
     <header class="flex justify-between p-5">
       <img src="../images/logo.svg" alt="logo">
       <img src="../images/icon-menu.svg" alt="menu icon" id="menu-icon" class="w-11">
@@ -89,11 +89,12 @@
       <img src="../images/client-maker.svg" alt="client-maker" class="w-1/4 p-3 box-border">
     </footer>
   </div>
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-
+  <div id="black-box" class="bg-black w-screen h-screen top-0 fixed opacity-50 hidden"></div>
 <script src="index.js"></script>
 </body>
 </html>
