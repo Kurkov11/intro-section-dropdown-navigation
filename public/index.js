@@ -38,3 +38,25 @@ document.getElementById('company-click-area').onclick = function(){
         companyExpanded = true;
     }
 }
+
+let desktopFeaturesExpanded = false;
+document.getElementById('features-click-area-desktop').onclick = function(){
+    if(desktopFeaturesExpanded){
+        document.getElementById('features-menu-desktop').style.display = 'none';
+        desktopFeaturesExpanded = false;
+    }else{
+        document.getElementById('features-menu-desktop').style.display = 'block';
+        desktopFeaturesExpanded = true;
+    }
+}
+
+let desktopCompanyExpanded = false;
+document.getElementById('company-click-area-desktop').onclick = function(){
+    if(desktopCompanyExpanded){
+        document.getElementById('company-menu-desktop').style.display = 'none';
+        desktopCompanyExpanded = false;
+    }else{
+        document.getElementById('company-menu-desktop').style.display = 'block';
+        desktopCompanyExpanded = true;
+    }
+}
