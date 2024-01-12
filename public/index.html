@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -13,11 +13,11 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="font-epilogue desktop:relative bg-almostWhite" id="stop-scrolling">
+<body class="font-epilogue relative bg-almostWhite h-full" id="stop-scrolling">
   
   <!--Only in mobile - START-->
   
-  <nav id="nav-bar" class="z-50 absolute top-0 flex-col justify-items-end bg-white h-full w-2/3 right-0 p-6 hidden"> 
+  <nav id="nav-bar" class="z-50 fixed overflow-auto top-0 flex-col justify-items-end bg-white h-inherit w-2/3 right-0 p-6 pb-20 hidden"> 
     <div id="menu-close-position" class="w-full h-fit flex justify-end">
       <img src="../images/icon-close-menu.svg" alt="close menu icon" id="close-menu-icon" class="w-7 h-7 mb-10">
     </div>
@@ -88,74 +88,80 @@
           <nav class="hidden desktop:flex content-between w-full">
             <ul class="flex items-center">
               <ul>
-                <div class="flex gap-2" id="features-click-area-desktop">
-                  <h2 class="text-mediumGray text-paragraphSize font-medium hover:text-almostBlack hover:cursor-pointer">Features</h2>
+                <div class="flex hover:cursor-pointer" id="features-click-area-desktop">
+                  <h2 class="text-mediumGray text-paragraphSize desktop:text-desktopParagraphSize font-medium" id="features-title">Features</h2>
                   <div class="aspect-arrowRatio flex items-center">
-                    <img src="../images/icon-arrow-down.svg" alt="arrow down" id="arrow-down-features-desktop">
+                    <img src="../images/icon-arrow-down.svg" alt="arrow down" id="arrow-down-features-desktop" class="pl-2">
+                    <img src="../images/icon-arrow-down-black.svg" alt="arrow down" id="arrow-down-black-features-desktop" class="hidden pl-2">
+                    <img src="../images/icon-arrow-up.svg" alt="arrow up" id="arrow-up-features-desktop" class="hidden pl-2">
+                    <img src="../images/icon-arrow-up-black.svg" alt="arrow up" id="arrow-up-black-features-desktop" class="hidden pl-2">
                   </div>
                 </div>
-                <div id="features-menu-desktop" class="hidden bg-white shadow absolute top-20 left-32">
-                  <li class="ml-5 text-mediumGray text-paragraphSize font-medium" id="todolist-desktop">
+                <div id="features-menu-desktop" class="hidden bg-white shadow absolute top-menuTop left-featuresLeft py-4 px-6 flex-col gap-3 rounded-xl drop-shadow-xl">
+                  <li class="text-mediumGray hover:text-almostBlack hover:cursor-pointer text-paragraphSize desktop:text-desktopParagraphSize font-medium" id="todolist-desktop">
                     <div class="flex">
-                      <img src="../images/icon-todo.svg" alt="todo icon" class="w-5 h-5 mr-4">
+                      <img src="../images/icon-todo.svg" alt="todo icon" class="w-4 h-4 mr-4">
                       <p>Todo List</p>
                     </div>
                   </li>
-                  <li class="ml-5 text-mediumGray text-paragraphSize font-medium" id="callendar-desktop">
+                  <li class="text-mediumGray hover:text-almostBlack hover:cursor-pointer text-paragraphSize desktop:text-desktopParagraphSize font-medium" id="callendar-desktop">
                     <div class="flex">
-                      <img src="../images/icon-calendar.svg" alt="calendar icon" class="w-5 h-5 mr-4">
+                      <img src="../images/icon-calendar.svg" alt="calendar icon" class="w-4 h-4 mr-4">
                       <p>Callendar</p>
                     </div>
                   </li>
-                  <li class="ml-5 text-mediumGray text-paragraphSize font-medium" id="reminders-desktop">
+                  <li class="text-mediumGray hover:text-almostBlack hover:cursor-pointer text-paragraphSize desktop:text-desktopParagraphSize font-medium" id="reminders-desktop">
                     <div class="flex">
-                      <img src="../images/icon-reminders.svg" alt="reminders icon" class="w-5 h-5 mr-4">
+                      <img src="../images/icon-reminders.svg" alt="reminders icon" class="w-4 h-4 mr-4">
                       <p>Reminders</p>
                     </div>
                   </li>
-                  <li class="ml-5 text-mediumGray text-paragraphSize font-medium" id="planning-desktop">
+                  <li class="text-mediumGray hover:text-almostBlack hover:cursor-pointer text-paragraphSize desktop:text-desktopParagraphSize font-medium" id="planning-desktop">
                     <div class="flex">
-                      <img src="../images/icon-planning.svg" alt="planning icon" class="w-5 h-5 mr-4">
+                      <img src="../images/icon-planning.svg" alt="planning icon" class="w-4 h-4 mr-4">
                       <p>Planning</p>
                     </div>
                   </li>
                 </div>
               </ul>
               <ul>
-                <div class="flex gap-2 ml-10" id="company-click-area-desktop">
-                  <h2 class="text-mediumGray font-medium text-paragraphSize hover:text-almostBlack hover:cursor-pointer">Company</h2>
+                <div class="flex gap-2 ml-10 hover:cursor-pointer" id="company-click-area-desktop">
+                  <h2 class="text-mediumGray font-medium text-paragraphSize desktop:text-desktopParagraphSize" id="company-title">Company</h2>
                   <div class="aspect-arrowRatio flex items-center">
                     <img src="../images/icon-arrow-down.svg" alt="arrow down" id="arrow-down-company-desktop">
+                    <img src="../images/icon-arrow-down-black.svg" alt="arrow down" id="arrow-down-black-company-desktop" class="hidden">
+                    <img src="../images/icon-arrow-up.svg" alt="arrow down" id="arrow-up-company-desktop" class="hidden">
+                    <img src="../images/icon-arrow-up-black.svg" alt="arrow down" id="arrow-up-black-company-desktop" class="hidden">
                   </div>
                 </div>
-                <div id="company-menu-desktop" class="hidden bg-white shadow absolute top-20 left-80">
-                  <li class="text-mediumGray text-paragraphSize font-medium ml-10 hover:text-almostBlack hover:cursor-pointer" id="history"><div>History</div></li>
-                  <li class="text-mediumGray text-paragraphSize font-medium ml-10 hover:text-almostBlack hover:cursor-pointer" id="our-team"><p>Our Team</p></li>
-                  <li class="text-mediumGray text-paragraphSize font-medium ml-10 hover:text-almostBlack hover:cursor-pointer" id="blog"><p>Blog</p></li>
+                <div id="company-menu-desktop" class="hidden bg-white drop-shadow-xl absolute top-menuTop left-companyLeft py-5 px-6 rounded-xl flex-col gap-2">
+                  <li class="text-mediumGray text-paragraphSize desktop:text-desktopParagraphSize font-medium hover:text-almostBlack hover:cursor-pointer" id="history"><div>History</div></li>
+                  <li class="text-mediumGray text-paragraphSize desktop:text-desktopParagraphSize font-medium hover:text-almostBlack hover:cursor-pointer" id="our-team"><p>Our Team</p></li>
+                  <li class="text-mediumGray text-paragraphSize desktop:text-desktopParagraphSize font-medium hover:text-almostBlack hover:cursor-pointer" id="blog"><p>Blog</p></li>
                 </div>
               </ul>
-              <li><h2 class="text-mediumGray font-medium text-paragraphSize ml-10 hover:text-almostBlack hover:cursor-pointer">Careers</h2></li>
-              <li><h2 class="text-mediumGray font-medium text-paragraphSize ml-10 hover:text-almostBlack hover:cursor-pointer">About</h2></li>
+              <li><h2 class="text-mediumGray font-medium text-paragraphSize desktop:text-desktopParagraphSize ml-10 hover:text-almostBlack hover:cursor-pointer">Careers</h2></li>
+              <li><h2 class="text-mediumGray font-medium text-paragraphSize desktop:text-desktopParagraphSize ml-10 hover:text-almostBlack hover:cursor-pointer">About</h2></li>
             </ul>
           </nav>
         </div>
           <div>
-            <a class="text-mediumGray text-paragraphSize font-medium text-center mr-10 hover:text-almostBlack hover:cursor-pointer">Login</a>
-            <a class="text-mediumGray text-paragraphSize font-medium text-center border-mediumGray border-2 rounded-2xl p-buttonDesktop hover:text-almostBlack hover:cursor-pointer">Register</a>
+            <a class="text-mediumGray text-paragraphSize desktop:text-desktopParagraphSize font-medium text-center mr-10 hover:text-almostBlack hover:cursor-pointer">Login</a>
+            <a class="text-mediumGray text-paragraphSize desktop:text-desktopParagraphSize font-medium text-center border-mediumGray border-2 rounded-2xl p-buttonDesktop hover:text-almostBlack hover:cursor-pointer hover:border-almostBlack">Register</a>
           </div>
       </div> 
       
       <!--Only in desktop - END-->
 
     </header>
-    <div class="my-14 desktop:my-0 desktop:flex desktop:h-main-and-img-desktop desktop:px-40 desktop:items-center desktop:mt-14"> <!--Used to position main and hero img side by side in desktop - START-->
+    <div class="my-14 desktop:my-0 desktop:flex desktop:h-main-and-img-desktop desktop:px-36 desktop:items-center desktop:mt-14"> <!--Used to position main and hero img side by side in desktop - START-->
       <img src="../images/image-hero-mobile.png" alt="" class="w-full desktop:hidden"> <!--Only in mobile-->
-      <main class="flex flex-col items-center desktop:items-start desktop:justify-between text-center desktop:text-left px-4 gap-9 desktop:gap-0 my-14 desktop:my-0 desktop:mr-20 desktop:px-0 desktop:max-h-full desktop:h-inherit">
+      <main class="flex flex-col items-center desktop:items-start desktop:justify-between text-center desktop:text-left px-4 gap-9 desktop:gap-0 my-14 desktop:my-0 desktop:mr-24 desktop:px-0 desktop:max-h-full desktop:h-inherit">
         <div class="flex flex-col items-center desktop:items-start text-center desktop:text-left gap-9 desktop:my-0 desktop:mt-20">
           <h1 class="font-bold text-headingSize desktop:text-desktopHeadingSize leading-none">Make remote work</h1>
           <p class="text-paragraphSize text-mediumGray desktop:font-medium desktop:mr-40">Get your team in sync, no matter your location. Streamline processes, 
           create team rituals, and watch productivity soar.</p>
-          <a href="#" class=" bg-almostBlack w-fit text-almostWhite px-7 py-4 rounded-2xl font-medium leading-none">Learn more</a>
+          <a href="#" class="bg-almostBlack border border-almostBlack w-fit px-7 py-3.5 rounded-2xl text-almostWhite font-medium hover:bg-almostWhite hover:text-almostBlack">Learn more</a>
         </div>
         <div class="hidden desktop:flex justify-between content-center items-center px-1 w-full h-fit"> <!--Only in desktop-->
           <img src="../images/client-databiz.svg" alt="client-databiz" class="w-1/4 px-6 box-border">
@@ -178,7 +184,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <div id="black-box" class="bg-black w-screen h-screen top-0 fixed opacity-50 hidden"></div>
+  <div id="black-box" class="z-10 bg-black w-screen h-screen top-0 fixed opacity-50 hidden"></div>
 <script src="index.js"></script>
 </body>
 </html>
